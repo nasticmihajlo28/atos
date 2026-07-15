@@ -1,26 +1,130 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --text-primary: #1e1e1e;
+  --text-body: #5c564f;
+  --text-muted: #8d8579;
+  --nav-inactive: #6b645c;
+  --accent: #b98d6d;
+  --accent-dark: #a97c5c;
+  --accent-light: #cfa382;
+  --cream: #f7f4ef;
+  --hairline: #ece7e0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--text-primary);
+  font-family: var(--font-nunito), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.font-display {
+  font-family: var(--font-playfair), serif;
+}
+
+/* --- Navigation links --- */
+.nav-link {
+  color: var(--nav-inactive);
+  transition: color 0.2s ease;
+}
+.nav-link:hover {
+  color: var(--accent);
+}
+.nav-link--active {
+  color: var(--text-primary);
+  border-bottom: 1.5px solid var(--accent);
+  padding-bottom: 4px;
+}
+
+/* --- Buttons --- */
+.btn-gradient {
+  background: linear-gradient(135deg, #cfa382, #b98d6d 55%, #a97c5c);
+  color: #fff;
+  transition: background 0.25s ease;
+}
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #b98d6d, #a97c5c);
+  color: #fff;
+}
+
+.btn-outline {
+  border: 1.5px solid var(--accent);
+  color: var(--text-primary);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* --- Underlined text links --- */
+.link-underline {
+  color: var(--text-primary);
+  border-bottom: 1.5px solid var(--accent);
+  transition: color 0.2s ease;
+}
+.link-underline:hover {
+  color: var(--accent);
+}
+
+/* --- Footer links --- */
+.footer-link {
+  color: var(--text-body);
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: var(--accent);
+}
+
+/* --- Image hover zoom (home featured grid) --- */
+.zoom-wrap {
+  overflow: hidden;
+}
+.zoom-img {
+  transition: transform 0.5s ease;
+}
+.zoom-wrap:hover .zoom-img {
+  transform: scale(1.04);
+}
+
+/* --- Portfolio filter buttons --- */
+.filter-btn {
+  font-family: var(--font-nunito), sans-serif;
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text-primary);
+  border: 1.5px solid var(--accent);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.filter-btn:hover {
+  color: var(--accent);
+}
+.filter-btn--active {
+  background: linear-gradient(135deg, #cfa382, #b98d6d 55%, #a97c5c);
+  color: #fff;
+  border: 1.5px solid transparent;
+}
+.filter-btn--active:hover {
+  color: #fff;
 }
