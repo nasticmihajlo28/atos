@@ -12,6 +12,61 @@
   --hairline: #ece7e0;
 }
 
+/* --- Brand fonts (licensed — not on Google Fonts) ---
+   Drop the licensed .woff2 files into /public/fonts (see public/fonts/README.md)
+   and these activate automatically. Until then the Google-hosted stand-ins
+   (Playfair Display / Nunito Sans, loaded in layout.tsx) render as fallback,
+   and Avenir also resolves to the system font on Apple devices. */
+@font-face {
+  font-family: "FreightDisplay";
+  src: url("/fonts/FreightDisplay-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FreightDisplay";
+  src: url("/fonts/FreightDisplay-BookItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FreightDisplay";
+  src: url("/fonts/FreightDisplay-Semibold.woff2") format("woff2");
+  font-weight: 500 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Roman.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Medium.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Heavy.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -25,7 +80,7 @@ body {
 body {
   background: #ffffff;
   color: var(--text-primary);
-  font-family: var(--font-nunito), sans-serif;
+  font-family: "Avenir", "Avenir Next", var(--font-nunito), sans-serif;
 }
 
 a {
@@ -34,7 +89,7 @@ a {
 }
 
 .font-display {
-  font-family: var(--font-playfair), serif;
+  font-family: "FreightDisplay", var(--font-playfair), serif;
 }
 
 /* --- Navigation links --- */
@@ -104,7 +159,7 @@ a {
 
 /* --- Portfolio filter buttons --- */
 .filter-btn {
-  font-family: var(--font-nunito), sans-serif;
+  font-family: "Avenir", "Avenir Next", var(--font-nunito), sans-serif;
   cursor: pointer;
   font-size: 13px;
   letter-spacing: 2px;
