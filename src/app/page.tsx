@@ -19,16 +19,16 @@ const services = [
     text: "Kompletna scenografija — od cvetnih zidova do stola mladenaca.",
   },
   {
-    id: "kat-rodjendani",
-    title: "Rođendani",
+    id: "kat-stolovi",
+    title: "Stolovi",
     src: "/images/sto-1.jpeg",
-    text: "Od prvog rođendana do velikih jubileja — dekor po vašoj temi.",
+    text: "Dekoracija stolova za svaku priliku — cveće, tkanine i detalji po vašoj temi.",
   },
   {
-    id: "kat-krstenja",
-    title: "Krštenja",
-    src: "/images/gotova-11.jpeg",
-    text: "Nežne, svetle postavke za najlepše porodične trenutke.",
+    id: "kat-automobili",
+    title: "Automobili",
+    src: "/images/auto-1.jpeg",
+    text: "Cvetni aranžmani i mašne za svadbenu kolonu — auto mladenaca koji se pamti.",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function Home() {
           </p>
           <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
             <Link
-              href="/kontakt"
+              href="/#kontakt"
               className="btn-gradient"
               style={{
                 fontSize: 13,
@@ -490,6 +490,7 @@ export default function Home() {
 
       {/* CTA */}
       <section
+        id="kontakt"
         style={{
           display: "grid",
           gridTemplateColumns: "minmax(0, 1.15fr) minmax(0, 1fr)",
@@ -540,7 +541,7 @@ export default function Home() {
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <a
-              href="tel:+38160000000"
+              href="tel:+381605656844"
               className="btn-gradient"
               style={{
                 fontSize: 13,
@@ -554,7 +555,7 @@ export default function Home() {
               Pozovi
             </a>
             <a
-              href="#"
+              href="viber://chat?number=%2B381605656844"
               className="btn-outline"
               style={{
                 fontSize: 13,
@@ -565,10 +566,28 @@ export default function Home() {
                 borderRadius: 4,
               }}
             >
-              Viber / WhatsApp
+              Viber
             </a>
             <a
-              href="#"
+              href="https://wa.me/381605656844"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+              style={{
+                fontSize: 13,
+                letterSpacing: 2,
+                textTransform: "uppercase",
+                fontWeight: 400,
+                padding: "14px 26px",
+                borderRadius: 4,
+              }}
+            >
+              WhatsApp
+            </a>
+            <a
+              href="https://www.instagram.com/atos.premium.decor/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-outline"
               style={{
                 fontSize: 13,

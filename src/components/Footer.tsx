@@ -123,7 +123,7 @@ export default function Footer({
               O nama
             </Link>
             <Link
-              href="/kontakt"
+              href="/#kontakt"
               className="footer-link"
               style={footerLinkStyle}
             >
@@ -134,30 +134,47 @@ export default function Footer({
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <div style={columnHeader}>Kontakt</div>
             <a
-              href="tel:+38160000000"
+              href="tel:+381605656844"
               className="footer-link"
               style={footerLinkStyle}
             >
-              06x xxx xxxx
+              060 565 6844
             </a>
-            <a href="#" className="footer-link" style={footerLinkStyle}>
-              Viber / WhatsApp
+            <a
+              href="viber://chat?number=%2B381605656844"
+              className="footer-link"
+              style={footerLinkStyle}
+            >
+              Viber
             </a>
-            <a href="#" className="footer-link" style={footerLinkStyle}>
-              Instagram DM
+            <a
+              href="https://wa.me/381605656844"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+              style={footerLinkStyle}
+            >
+              WhatsApp
             </a>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <div style={columnHeader}>Pratite nas</div>
-            <a href="#" className="footer-link" style={footerLinkStyle}>
+            <a
+              href="https://www.instagram.com/atos.premium.decor/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+              style={footerLinkStyle}
+            >
               Instagram
             </a>
-            <a href="#" className="footer-link" style={footerLinkStyle}>
-              Facebook
-            </a>
-            <a href="#" className="footer-link" style={footerLinkStyle}>
-              TikTok
+            <a
+              href="mailto:cvecaraatos@gmail.com"
+              className="footer-link"
+              style={footerLinkStyle}
+            >
+              cvecaraatos@gmail.com
             </a>
           </div>
         </div>

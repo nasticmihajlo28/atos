@@ -7,7 +7,7 @@ const links: { key: NavKey; label: string; href: string }[] = [
   { key: "portfolio", label: "Portfolio", href: "/portfolio" },
   { key: "usluge", label: "Usluge", href: "/usluge" },
   { key: "o-nama", label: "O nama", href: "/o-nama" },
-  { key: "kontakt", label: "Kontakt", href: "/kontakt" },
+  { key: "kontakt", label: "Kontakt", href: "/#kontakt" },
 ];
 
 export default function Navbar({ active }: { active: NavKey }) {
@@ -77,7 +77,7 @@ export default function Navbar({ active }: { active: NavKey }) {
       </nav>
 
       <Link
-        href="/kontakt"
+        href="/#kontakt"
         className="btn-outline"
         style={{
           fontSize: 12,
