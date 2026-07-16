@@ -51,11 +51,11 @@ const steps = [
 ];
 
 const featured = [
-  { id: "f-1", src: "/images/gotova-3.png", alt: "Dekoracija venčanja", span: true },
-  { id: "f-2", src: "/images/gotova-5.jpeg", alt: "Dekoracija svečane sale", span: false },
-  { id: "f-3", src: "/images/gotova-6.jpeg", alt: "Cvetna dekoracija", span: false },
-  { id: "f-4", src: "/images/napolje-v1.jpeg", alt: "Dekoracija na otvorenom", span: false },
-  { id: "f-5", src: "/images/gotova-8.jpeg", alt: "Dekoracija proslave", span: false },
+  { id: "f-1", src: "/images/izdvojeni-radovi-crvena.jpeg", alt: "Crvena dekoracija venčanja", span: true },
+  { id: "f-2", src: "/images/izdvojeni-1.jpeg", alt: "Bela dekoracija sa orhidejama", span: false },
+  { id: "f-3", src: "/images/izdvojeni-2.png", alt: "Dekoracija sa žutim ružama", span: false },
+  { id: "f-4", src: "/images/izdvojeni-3.jpeg", alt: "Bordo dekoracija sa draperijama", span: false },
+  { id: "f-5", src: "/images/izdvojeni-4.jpeg", alt: "Dekoracija venčanja na otvorenom", span: false },
 ];
 
 export default function Home() {
@@ -168,7 +168,7 @@ export default function Home() {
               }}
             >
               <Photo
-                src="/images/spremna-1.jpeg"
+                src="/images/atos-hero.jpeg"
                 alt="Dekoracija venčanja — Atos Premium"
                 radius="265px 265px 10px 10px"
                 sizes="(max-width: 900px) 100vw, 530px"
@@ -499,8 +499,8 @@ export default function Home() {
       >
         <div style={{ minHeight: 440 }}>
           <Photo
-            src="/images/gotova-4.png"
-            alt="Konsultacija i planiranje dekoracije"
+            src="/images/dekoracijaa.jpeg"
+            alt="Dekoracija proslave — Atos Premium"
             radius={0}
             sizes="(max-width: 900px) 100vw, 55vw"
           />

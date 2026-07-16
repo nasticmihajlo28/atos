@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export type NavKey = "pocetna" | "portfolio" | "usluge" | "o-nama" | "kontakt";
@@ -24,24 +25,19 @@ export default function Navbar({ active }: { active: NavKey }) {
       }}
     >
       <Link href="/" style={{ display: "flex", alignItems: "center", gap: 14 }}>
-        <div
-          className="font-display"
+        <Image
+          src="/images/logo-pravi.PNG"
+          alt="Atos Premium logo"
+          width={64}
+          height={64}
           style={{
             height: 64,
             width: 64,
-            borderRadius: 4,
-            background: "linear-gradient(135deg, #cfa382, #b98d6d 55%, #a97c5c)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            fontSize: 22,
-            letterSpacing: 1,
-            boxShadow: "0 2px 6px rgba(30,30,30,.18)",
+            objectFit: "cover",
+            display: "block",
+            filter: "drop-shadow(0 2px 6px rgba(30,30,30,.18))",
           }}
-        >
-          AP
-        </div>
+        />
         <span
           className="font-display"
           style={{
