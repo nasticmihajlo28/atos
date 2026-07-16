@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Photo from "@/components/Photo";
 
 type FilterKey = "sve" | "vencanja" | "rodjendani" | "automobili";
 
@@ -14,20 +14,47 @@ const categories: { key: FilterKey; label: string }[] = [
   { key: "automobili", label: "Automobili" },
 ];
 
-const itemDefs: { cat: Exclude<FilterKey, "sve">; label: string; count: number }[] =
-  [
-    { cat: "vencanja", label: "Venčanje", count: 6 },
-    { cat: "rodjendani", label: "Rođendan", count: 4 },
-    { cat: "automobili", label: "Automobil", count: 4 },
-  ];
+type Item = { src: string; cat: Exclude<FilterKey, "sve">; alt: string };
 
-const allItems = itemDefs.flatMap(({ cat, label, count }) =>
-  Array.from({ length: count }, (_, i) => ({
-    id: `pf-${cat}-${i + 1}`,
-    cat,
-    placeholder: `${label} ${i + 1}`,
-  })),
-);
+const allItems: Item[] = [
+  // Venčanja
+  { src: "/images/gotova-9.png", cat: "vencanja", alt: "Dekoracija venčanja" },
+  { src: "/images/gotova-10.jpeg", cat: "vencanja", alt: "Dekoracija venčanja" },
+  { src: "/images/gotova-12.jpeg", cat: "vencanja", alt: "Dekoracija venčanja" },
+  { src: "/images/gotova-13.jpeg", cat: "vencanja", alt: "Dekoracija venčanja" },
+  { src: "/images/gotova-14.jpeg", cat: "vencanja", alt: "Dekoracija venčanja" },
+  { src: "/images/gotova-15.jpeg", cat: "vencanja", alt: "Dekoracija venčanja" },
+  { src: "/images/gotova-18.jpeg", cat: "vencanja", alt: "Dekoracija venčanja" },
+  { src: "/images/gotova-19.jpeg", cat: "vencanja", alt: "Dekoracija venčanja" },
+  { src: "/images/spremna-2.jpeg", cat: "vencanja", alt: "Dekoracija venčanja" },
+  { src: "/images/proba-13.jpeg", cat: "vencanja", alt: "Dekoracija venčanja" },
+  // Rođendani (dekoracija stolova i prostora)
+  { src: "/images/sto-2.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-3.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-4.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-5.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-6.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-7.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-8.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-10.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-12.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-13.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-14.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-15.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-16.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-17.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/sto-1.jpeg", cat: "rodjendani", alt: "Dekoracija stola" },
+  { src: "/images/ogledalo-1.jpeg", cat: "rodjendani", alt: "Dekoracija sa ogledalom" },
+  { src: "/images/ogledalo-2.jpeg", cat: "rodjendani", alt: "Dekoracija sa ogledalom" },
+  { src: "/images/ogledalo-3.jpeg", cat: "rodjendani", alt: "Dekoracija sa ogledalom" },
+  { src: "/images/ogledalo-4.jpeg", cat: "rodjendani", alt: "Dekoracija sa ogledalom" },
+  // Automobili
+  { src: "/images/auto-1.jpeg", cat: "automobili", alt: "Dekoracija automobila" },
+  { src: "/images/auto-2.jpeg", cat: "automobili", alt: "Dekoracija automobila" },
+  { src: "/images/auto-3.jpeg", cat: "automobili", alt: "Dekoracija automobila" },
+  { src: "/images/auto-4.jpeg", cat: "automobili", alt: "Dekoracija automobila" },
+  { src: "/images/auto-6.jpeg", cat: "automobili", alt: "Dekoracija automobila" },
+];
 
 export default function PortfolioPage() {
   const [filter, setFilter] = useState<FilterKey>("sve");
@@ -128,7 +155,7 @@ export default function PortfolioPage() {
         >
           {items.map((item) => (
             <div
-              key={item.id}
+              key={item.src}
               style={{
                 width: 227,
                 height: 345,
@@ -136,7 +163,12 @@ export default function PortfolioPage() {
                 overflow: "hidden",
               }}
             >
-              <ImagePlaceholder label={item.placeholder} radius={4} />
+              <Photo
+                src={item.src}
+                alt={item.alt}
+                radius={4}
+                sizes="227px"
+              />
             </div>
           ))}
         </div>

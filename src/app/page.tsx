@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Photo from "@/components/Photo";
 
 const kicker = {
   fontSize: 12,
@@ -15,19 +15,19 @@ const services = [
   {
     id: "kat-vencanja",
     title: "Venčanja",
-    placeholder: "Foto — venčanje",
+    src: "/images/gotova-7.jpeg",
     text: "Kompletna scenografija — od cvetnih zidova do stola mladenaca.",
   },
   {
     id: "kat-rodjendani",
     title: "Rođendani",
-    placeholder: "Foto — rođendan",
+    src: "/images/sto-1.jpeg",
     text: "Od prvog rođendana do velikih jubileja — dekor po vašoj temi.",
   },
   {
     id: "kat-krstenja",
     title: "Krštenja",
-    placeholder: "Foto — krštenje",
+    src: "/images/gotova-11.jpeg",
     text: "Nežne, svetle postavke za najlepše porodične trenutke.",
   },
 ];
@@ -51,11 +51,11 @@ const steps = [
 ];
 
 const featured = [
-  { id: "f-crvena", label: "Crvena dekoracija venčanja", span: true },
-  { id: "f-bela-1", label: "Bela dekoracija sa perlama", span: false },
-  { id: "f-bela-2", label: "Bela dekoracija sa orhidejama", span: false },
-  { id: "f-otvoreno", label: "Dekoracija na otvorenom", span: false },
-  { id: "f-sala", label: "Dekoracija svečane sale", span: false },
+  { id: "f-1", src: "/images/gotova-3.png", alt: "Dekoracija venčanja", span: true },
+  { id: "f-2", src: "/images/gotova-5.jpeg", alt: "Dekoracija svečane sale", span: false },
+  { id: "f-3", src: "/images/gotova-6.jpeg", alt: "Cvetna dekoracija", span: false },
+  { id: "f-4", src: "/images/napolje-v1.jpeg", alt: "Dekoracija na otvorenom", span: false },
+  { id: "f-5", src: "/images/gotova-8.jpeg", alt: "Dekoracija proslave", span: false },
 ];
 
 export default function Home() {
@@ -167,9 +167,12 @@ export default function Home() {
                 boxShadow: "0 24px 56px rgba(30,30,30,.2)",
               }}
             >
-              <ImagePlaceholder
-                label="Foto — dekoracija venčanja"
+              <Photo
+                src="/images/spremna-1.jpeg"
+                alt="Dekoracija venčanja — Atos Premium"
                 radius="265px 265px 10px 10px"
+                sizes="(max-width: 900px) 100vw, 530px"
+                priority
               />
             </div>
           </div>
@@ -285,7 +288,12 @@ export default function Home() {
                   className="zoom-img"
                   style={{ width: "100%", height: "100%" }}
                 >
-                  <ImagePlaceholder label={item.label} radius={10} />
+                  <Photo
+                    src={item.src}
+                    alt={item.alt}
+                    radius={10}
+                    sizes="(max-width: 1280px) 50vw, 420px"
+                  />
                 </div>
               </div>
             ))}
@@ -347,7 +355,12 @@ export default function Home() {
                 <div
                   style={{ height: 340, borderRadius: 4, overflow: "hidden" }}
                 >
-                  <ImagePlaceholder label={service.placeholder} radius={4} />
+                  <Photo
+                    src={service.src}
+                    alt={service.title}
+                    radius={4}
+                    sizes="(max-width: 1280px) 33vw, 410px"
+                  />
                 </div>
                 <div
                   style={{
@@ -484,7 +497,12 @@ export default function Home() {
         }}
       >
         <div style={{ minHeight: 440 }}>
-          <ImagePlaceholder label="Foto — konsultacija / tim" radius={0} />
+          <Photo
+            src="/images/gotova-4.png"
+            alt="Konsultacija i planiranje dekoracije"
+            radius={0}
+            sizes="(max-width: 900px) 100vw, 55vw"
+          />
         </div>
         <div
           style={{

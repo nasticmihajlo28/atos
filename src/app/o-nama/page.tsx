@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Photo from "@/components/Photo";
 
 export default function ONamaPage() {
   return (
@@ -19,7 +19,12 @@ export default function ONamaPage() {
           }}
         >
           <div style={{ height: 520, borderRadius: 4, overflow: "hidden" }}>
-            <ImagePlaceholder label="Foto — tim" radius={4} />
+            <Photo
+              src="/images/gotova-16.jpeg"
+              alt="Atos Premium — dekoracija proslave"
+              radius={4}
+              sizes="(max-width: 1180px) 100vw, 540px"
+            />
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             <div
