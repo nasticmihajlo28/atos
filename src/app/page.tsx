@@ -292,7 +292,7 @@ export default function Home() {
                     src={item.src}
                     alt={item.alt}
                     radius={10}
-                    sizes="(max-width: 1280px) 50vw, 420px"
+                    sizes="(max-width: 1280px) 50vw, 640px"
                   />
                 </div>
               </div>
@@ -359,7 +359,7 @@ export default function Home() {
                     src={service.src}
                     alt={service.title}
                     radius={4}
-                    sizes="(max-width: 1280px) 33vw, 410px"
+                    sizes="(max-width: 1280px) 33vw, 480px"
                   />
                 </div>
                 <div

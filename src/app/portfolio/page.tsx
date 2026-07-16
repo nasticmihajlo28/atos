@@ -167,7 +167,7 @@ export default function PortfolioPage() {
                 src={item.src}
                 alt={item.alt}
                 radius={4}
-                sizes="227px"
+                sizes="480px"
               />
             </div>
           ))}
